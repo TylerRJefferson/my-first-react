@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 const names = ['Kaylen', 'Ro', 'Tyler', 'Corwin', 'Jacques', 'Captain Ed',
- 'Todd', 'Damian', 'Brad', 'Cari', 'Gianna', 'Eddie', 'Mido', 'Adi', 'Nick',
- 'Fanessa', 'Gerly', 'Emily', 'Ainis', 'Sebas', 'Nerissa', 'Cas']
+ 'Todd', 'Damian', 'Cari', 'Gianna', 'Eddie', 'Mido', 'Adi', 'Nick',
+ 'Fanessa', 'Gerly', 'Emily', 'Ainis', 'Nerissa', 'Cas', 'Brad', 'Sebas']
 
 function App() {
   const [myName, setMyName] = useState('Tyler')
@@ -17,7 +17,7 @@ function App() {
           {myName} is pretty damn cool!
         </p>
         {names.map(name => (
-          <button onClick={() => setMyName(name)}>{name}</button>
+          <button key={name} onClick={() => setMyName(name)}>{name}</button>
         ))}
         
         <p>You clicked the button {counter} times</p>
